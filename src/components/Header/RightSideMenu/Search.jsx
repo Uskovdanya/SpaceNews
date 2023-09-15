@@ -6,7 +6,7 @@ function Search({ query, setQuery, onSearchNews }) {
       <form action="#" className=" " onSubmit={onSearchNews}>
         <input
           type="text"
-          className="border-none focus:bg-gray-200 focus:outline-none rounded-[30px] px-0 py-1 font-Roboto text-md leading-[18px] font-normal h-[30px]active:outline-none bg-gray-100 w-0 group-hover:w-[500px] cursor-pointer transition-all duration-200 ease-linear group-hover:px-6 outline-none"
+          className="border-none focus:bg-gray-200 focus:outline-none rounded-[30px] px-0 py-1 font-Roboto text-md leading-[18px] font-normal h-[30px]active:outline-none bg-gray-100 w-0 md:group-hover:w-[500px] group-hover:w-[80px] xs:group-hover:w-[100px] sm:group-hover:w-[200px] cursor-pointer transition-all duration-200 ease-linear group-hover:px-6 outline-none"
           placeholder="Search news"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
