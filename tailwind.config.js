@@ -1,7 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssDebugScreens from "tailwindcss-debug-screens";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "375px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
+      "2xl": "1920px",
+    },
     extend: {
       fontFamily: {
         Playfair: ["Playfair Display"],
@@ -22,14 +32,6 @@ export default {
         screens: {
           xl: "1440px",
         },
-      },
-      screens: {
-        xs: "375px",
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1440px",
-        "2xl": "1920px",
       },
 
       transitionTimingFunction: {},
@@ -55,5 +57,5 @@ export default {
       keyframes: {},
     },
   },
-  plugins: [],
+  plugins: [tailwindcssDebugScreens],
 };

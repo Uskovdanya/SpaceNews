@@ -16,7 +16,7 @@ import Loader from "./components/Loader";
 import ErrorMessage from "./components/ErrorMessage";
 
 import Container from "./components/Main/Container";
-import API from "./components/API/API";
+
 import MobileMenu from "./components/Header/RightSideMenu/MobileMenu";
 
 function App() {
@@ -122,10 +122,21 @@ function App() {
             <Button>Portal</Button>
           </LeftSideMenu>
           <RightSideMenu>
-            <Search query={query} setQuery={setQuery} onSearchNews={handleSearchNews} />
+            <Search
+              query={query}
+              setQuery={setQuery}
+              onSearchNews={handleSearchNews}
+              hidden="sm:flex hidden"
+            />
             <MobileMenu />
           </RightSideMenu>
         </Header>
+        <Search
+          query={query}
+          setQuery={setQuery}
+          onSearchNews={handleSearchNews}
+          hidden="flex sm:hidden"
+        />
         <Main>
           <Container>
             {isLoading && <Loader />}
