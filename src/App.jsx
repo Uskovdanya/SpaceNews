@@ -135,14 +135,14 @@ function App() {
           query={query}
           setQuery={setQuery}
           onSearchNews={handleSearchNews}
-          hidden="flex sm:hidden"
+          hidden="flex sm:hidden mb-8"
         />
+        <Container>
+          {isLoading && <Loader />}
+          {!isLoading && !error && <NewsList listNews={searchNews} />}
+          {error && <ErrorMessage message={error} />}
+        </Container>
         <Main>
-          <Container>
-            {isLoading && <Loader />}
-            {!isLoading && !error && <NewsList listNews={searchNews} />}
-            {error && <ErrorMessage message={error} />}
-          </Container>
           <Title id="hotTopics" font="sm:text-[48px]" smFont="text-[36px]">
             Hot topics
           </Title>

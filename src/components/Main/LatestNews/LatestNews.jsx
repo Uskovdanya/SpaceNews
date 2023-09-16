@@ -7,7 +7,7 @@ function replaceImage(error) {
 function LatestNews({ item }) {
   const { image_url: image, url, title, news_site: site, published_at: published } = item;
   return (
-    <a className=" lg:w-[270px] sm:w-[203px] w-[143px]" href={url}>
+    <a className="lg:w-[270px] sm:w-[203px] w-[143px]" href={url}>
       <img
         src={image}
         onError={replaceImage}
