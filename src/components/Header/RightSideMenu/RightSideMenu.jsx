@@ -1,4 +1,8 @@
 function RightSideMenu({ children }) {
-  return <div className="flex gap-[30px] justify-center items-center relative">{children}</div>;
+  return (
+    <div className="relative  flex items-center justify-center gap-[30px]">
+      {children}
+    </div>
+  );
 }
 export default RightSideMenu;

@@ -33,7 +33,9 @@ function App() {
       try {
         setIsLoading(true);
         setError("");
-        const res = await fetch(`https://api.spaceflightnewsapi.net/v4/articles/?limit=9`);
+        const res = await fetch(
+          `https://api.spaceflightnewsapi.net/v4/articles/?limit=9`,
+        );
         if (!res.ok) throw new Error("Something goes wrong with fetching news");
         const data = await res.json();
         if (data.Response === "False") throw new Error("News not found");
@@ -54,8 +56,11 @@ function App() {
       try {
         setIsLoading(true);
         setError("");
-        const res = await fetch(`https://api.spaceflightnewsapi.net/v4/blogs/?limit=9`);
-        if (!res.ok) throw new Error("Something goes wrong with fetching blogs");
+        const res = await fetch(
+          `https://api.spaceflightnewsapi.net/v4/blogs/?limit=9`,
+        );
+        if (!res.ok)
+          throw new Error("Something goes wrong with fetching blogs");
         const data = await res.json();
         if (data.Response === "False") throw new Error("Blogs not found");
 
@@ -75,7 +80,7 @@ function App() {
         setIsLoading(true);
         setError("");
         const res = await fetch(
-          `https://api.spaceflightnewsapi.net/v4/articles/?limit=4&search=${query}`
+          `https://api.spaceflightnewsapi.net/v4/articles/?limit=4&search=${query}`,
         );
         if (!res.ok) throw new Error("Something goes wrong with fetching news");
         const data = await res.json();
@@ -115,7 +120,7 @@ function App() {
 
   return (
     <>
-      <div className="container lg:pl-[125px] lg:pr-[135px] pt-8 sm:pl-[60px] sm:pr-[59px] pl-[35px] pr-[35px] pb-12">
+      <div className="container pb-12 pl-[35px] pr-[35px] pt-8 sm:pl-[60px] sm:pr-[59px] lg:pl-[125px] lg:pr-[135px]">
         <Header>
           <LeftSideMenu>
             <Button>News</Button>
@@ -143,7 +148,7 @@ function App() {
           {error && <ErrorMessage message={error} />}
         </Container>
         <Main>
-          <Title id="hotTopics" font="sm:text-[48px]" smFont="text-[36px]">
+          <Title id="hotTopics" font="sm:text-[48px]" smFont="text-[36px] ">
             Hot topics
           </Title>
           <Container>

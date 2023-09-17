@@ -1,10 +1,10 @@
 function Search({ query, setQuery, onSearchNews, hidden }) {
   return (
-    <div className={`${hidden} gap-[30px] relative group justify-end`}>
+    <div className={`${hidden} group relative justify-end gap-[30px]`}>
       <form action="#" className=" " onSubmit={onSearchNews}>
         <input
           type="text"
-          className="border-none focus:bg-gray-200 focus:outline-none rounded-[30px] px-0 py-1 font-Roboto text-md leading-[18px] font-normal h-[30px]active:outline-none bg-gray-100 w-0 md:group-hover:w-[400px] group-hover:w-[180px] xs:group-hover:w-[250px] cursor-pointer transition-all duration-200 ease-linear group-hover:px-6 outline-none"
+          className="text-md  h-[30px]active:outline-none w-0 cursor-pointer rounded-[30px] border-none bg-gray-100 px-0 py-1 font-Roboto font-normal leading-[18px] outline-none transition-all duration-200 ease-linear focus:bg-gray-200 focus:outline-none group-hover:w-[180px] group-hover:px-6 xs:group-hover:w-[250px] md:group-hover:w-[400px]"
           placeholder="Search news"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

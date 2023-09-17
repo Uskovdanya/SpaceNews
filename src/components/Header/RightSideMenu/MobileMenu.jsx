@@ -7,21 +7,21 @@ function MobileMenu() {
       <div
         onClick={() => setActive((active) => !active)}
         id="burger"
-        className={`group relative z-10 h-5 w-[30px] sm:block cursor-pointer ${
+        className={`group  relative z-10 h-5 w-[30px] cursor-pointer sm:block ${
           active ? "active" : ""
         }`}
       >
-        <span className="absolute top-0 left-0 h-[1px] w-full translate-y-0 bg-black transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"></span>
-        <span className="absolute top-1/2 left-0 h-[1px] w-full translate-y-0 bg-black group-[.active]:opacity-0"></span>
+        <span className="absolute left-0 top-0 h-[1px] w-full translate-y-0 bg-black transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"></span>
+        <span className="absolute left-0 top-1/2 h-[1px] w-full translate-y-0 bg-black group-[.active]:opacity-0"></span>
         <span className="absolute bottom-0 left-0 h-[1px] w-full bg-black transition-transform group-[.active]:-translate-y-[11px] group-[.active]:-rotate-45"></span>
       </div>
 
       {active ? (
         <nav
           id="mobile"
-          className="absolute right-0 top-10 items-center justify-center bg-menuColor shadow-menu z-500 w-[180px] h-[124px]"
+          className="z-500 absolute right-0 top-10 h-[124px] w-[180px] items-center justify-center bg-menuColor shadow-menu"
         >
-          <ul className="flex flex-col items-center gap-5 mt-2">
+          <ul className="mt-2 flex flex-col items-center gap-5">
             <li className="hover:bg-textColor hover:text-textWhite">
               <a href="#hotTopics">Hot topics</a>
             </li>

@@ -24,7 +24,7 @@ function TextExpander({
     color: buttonColor,
   };
   return (
-    <div className="max-w-[270px] text-hotTopicColor font-Playfair text-lg font-normal leading-[180%] justify-center items-center hidden md:block">
+    <div className="hidden max-w-[270px] items-center justify-center font-Playfair text-lg font-normal leading-[180%] text-hotTopicColor md:block  ">
       <span>{displayText}</span>
 
       <button style={buttonStyle} onClick={() => setIsExpanded((exp) => !exp)}>

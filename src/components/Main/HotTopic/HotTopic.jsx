@@ -11,22 +11,24 @@ function HotTopic({ hotNews }) {
   } = hotNews;
 
   return (
-    <div className="flex gap-[30px] xl:flex-row flex-col">
+    <div className="flex flex-col gap-[30px] xl:flex-row">
       <a href={url}>
         <figure className="relative">
           <img
             src={image}
             alt=""
-            className="rounded-2 lg:max-w-[870px] lg:h-[400px] relative object-cover xs:w-[647px] xs:h-[289px] w-[305px] h-[200px]"
+            className="rounded-2 relative h-[200px] w-[305px] object-cover xs:h-[289px] xs:w-[647px] lg:h-[400px] lg:max-w-[870px] "
           />
-          <figcaption className="absolute sm:left-8 xs:left-3 lg:top-[190px] text-textWhite lg:max-w-[378px] max-w-[281px] sm:top-[159px] top-[126px]">
-            <p className="font-Playfair font-bold md:leading-[48px] md:text-2xl text-base mb-2 lg:mb-4">
+          <figcaption className="absolute top-[126px] max-w-[281px] text-textWhite xs:left-3 sm:left-8 sm:top-[159px] lg:top-[190px] lg:max-w-[378px]">
+            <p className="mb-2 font-Playfair text-base font-bold md:text-2xl md:leading-[48px] lg:mb-4">
               {title}
             </p>
-            <p className="font-Roboto text-xs leading-[18px] font-normal inline-block mr-[27px]">
+            <p className="mr-[27px] inline-block font-Roboto text-xs font-normal leading-[18px]">
               {new Date(Date.parse(published)).toLocaleDateString("ru-RU")}
             </p>
-            <p className="font-Roboto text-xs leading-[18px] font-normal inline-block">{site}</p>
+            <p className="inline-block font-Roboto text-xs font-normal leading-[18px]">
+              {site}
+            </p>
           </figcaption>
         </figure>
       </a>
